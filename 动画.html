@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>浏览器滑动到当前界面触发动画</title>
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.b1, .b2, .b3, .b4 { width: 500px; height: 400px; margin: 0 auto; }
+.b1 div { width: 500px; height: 400px; background: red; }
+.b2 div { width: 500px; height: 400px; background: green; }
+.b3 div { width: 500px; height: 400px; background: brown; }
+.b4 div { width: 500px; height: 400px; background: blue; }
+</style>
+</head>
+<body style="height: 2000px;">
+<div class="b1">
+  <div data-animation="bounceInRight" data-delay="0"></div>
+</div>
+<div class="b2">
+  <div data-animation="fadeInDown" data-delay="0"></div>
+</div>
+<div class="b3">
+  <div data-animation="fadeInUp" data-delay="0"></div>
+</div>
+<div class="b4">
+  <div data-animation="fadeInLeft" data-delay="0"></div>
+</div>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+function addAnimate(element){
+	var eTop=$(element).offset().top,
+		wTop=$(window).height(),
+		dTop = $(document).scrollTop();
+	if(dTop+wTop-200 > eTop){
+		$(element).addClass('ani');
+		init();
+	}
+	$(window).resize(function(){
+		wTop=$(window).height();
+	});
+	$(window).scroll(function(){
+		dTop = $(document).scrollTop();
+		if(dTop+wTop-200 > eTop){
+			$(element).addClass('ani');
+			init();
+		}
+	});
+}
+//动画轮播
+function init() {
+	$('[data-animation]').css({
+		'-webkit-animation': 'none',
+		display: 'none'
+	}),
+	$('.ani [data-animation]').each(function(n, ele) {
+		var e        = $(ele),
+			name     = e.attr('data-animation'),
+			duration = e.attr('data-duration') || 1500,
+			timing   = e.attr('data-timing-function') || 'ease',
+			delay    = e.attr('data-delay') || 0,
+			count    = e.attr('data-count') || 1;
+		e.css({
+			display                             : 'block',
+			'-webkit-animation-fill-mode'       : 'both',
+			'-webkit-animation-name'            : name,
+			'-webkit-animation-duration'        : duration + 'ms',
+			'-webkit-animation-timing-function' : timing,
+			'-webkit-animation-delay'           : delay + 'ms',
+			'-webkit-animation-iteration-count' : count
+		});
+	});
+}
+addAnimate('.b1');
+addAnimate('.b2');
+addAnimate('.b3');
+addAnimate('.b4');
+</script>
+</body>
+</html>

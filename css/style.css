@@ -1,0 +1,592 @@
+@charset 'utf-8';
+/*轮播图-左右切换*/
+#b1 {
+    height: 600px;
+}
+#b1 .swiper-slide {
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+#b1 .swiper-slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#b1 .swiper-pagination {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+#b1 .swiper-pagination-switch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 8px;
+    background: #fff;
+    border-radius: 100%;
+    opacity: .5;
+}
+#b1 .swiper-pagination-switch.swiper-active-switch {
+    background: #ff0000;
+    opacity: 1;
+}
+#b1 .swiper-button-prev, #b1 .swiper-button-next {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    width: 26px;
+    height: 44px;
+    background-size: 26px auto;
+}
+#b1 .swiper-button-prev {
+    left: 10px;
+    background-image: url(../images/j-prev.png);
+}
+#b1 .swiper-button-next {
+    right: 10px;
+    background-image: url(../images/j-next.png);
+}
+/*轮播图-左右切换*/
+#b2 {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+#b2 .slide {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+}
+#b2 .slide .img {
+    margin: 10px auto;
+    border: none;
+}
+#b2 .img {
+    position: relative;
+    width: 780px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #edeeee;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(204,205,206,5);
+}
+#b2 #img-slider .img {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    border-color: #fff;
+}
+#b2 .img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#b2 .img .label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5% 0;
+    background: #10af8b;
+    border-radius: 0 0 4px 4px;
+    font-size: 150%;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+#b2 a.next, #b2 a.prev {
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    margin-top: -55px;
+    background: url(../images/j-prev.png) no-repeat center rgb(16,175,139);
+    background-size: 15px auto;
+    border-radius: 100%;
+    -webkit-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+#b2 a.next:hover, #b2 a.prev:hover {
+    background-color: rgb(16, 175, 139, .5);
+}
+#b2 a.prev {
+    right: 0;
+    left: auto;
+    background-image: url(../images/j-next.png);
+}
+#b2 ul.switcher {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+#b2 ul.switcher li {
+    display: inline;
+}
+#b2 ul.switcher li a {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 2px;
+    border: 1px solid #10af8b;
+    border-radius: 100%;
+    -webkit-transition: background 0.30s ease-in-out;
+    transition: background 0.30s ease-in-out;
+}
+#b2 ul.switcher li a:hover, #b2 ul.switcher li.active a {
+    background: #10af8b;
+}
+#b2 ul.switcher li:last-child {
+    margin-right: 0;
+}
+/*轮播图-左右切换-遮罩*/
+html, body {
+*width: 100%;
+*overflow-x: hidden;
+}
+#b3Box {
+    width: 100%;
+    overflow: hidden;
+}
+#b3 {
+    position: relative;
+    width: 1200px;
+    height: 500px;
+    overflow: visible;
+}
+#b3 .maskl, #b3 .maskr {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    width: 100%;
+    height: 500px;
+    background: #000;
+    content: '';
+    opacity: .7;
+    filter: alpha(opacity=70);
+}
+#b3 .maskl {
+    left: -100%;
+}
+#b3 .maskr {
+    right: -100%;
+}
+#b3 .swiper-slide {
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+#b3 .swiper-slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#b3 .swiper-pagination {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+#b3 .swiper-pagination-switch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 8px;
+    background: #fff;
+    border-radius: 100%;
+    opacity: .5;
+}
+#b3 .swiper-pagination-switch.swiper-active-switch {
+    background: #ff0000;
+    opacity: 1;
+}
+#b3 .swiper-button-prev, #b3 .swiper-button-next {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    width: 26px;
+    height: 44px;
+    background-size: 26px auto;
+}
+#b3 .swiper-button-prev {
+    left: -50px;
+    background-image: url(../images/j-prev.png);
+}
+#b3 .swiper-button-next {
+    right: -50px;
+    background-image: url(../images/j-next.png);
+}
+/*投资计算器1*/
+.calculator1 {
+    width: 360px;
+    padding: 40px 22px;
+    background: #ddd;
+}
+.calculator1 h2 {
+    padding-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+.calculator1 h3 {
+    padding-bottom: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+.calculator1 .box {
+    width: 360px;
+    height: 40px;
+    margin-top: 10px;
+    background: none;
+    border-bottom: 1px solid #a69b92;
+    line-height: 40px;
+}
+.calculator1 .box label {
+    float: left;
+    display: block;
+    width: 100px;
+    font-weight: 600;
+}
+.calculator1 .box input {
+    float: left;
+    width: 195px;
+    height: 40px;
+    background: none;
+    border-radius: 0;
+    line-height: 40px;
+}
+.calculator1 .box span {
+    float: right;
+    display: block;
+    width: 65px;
+    font-weight: 600;
+}
+.calculator1 .input {
+    width: 360px;
+    height: 36px;
+    margin: 28px 0 20px;
+    background: none;
+    border-radius: 0;
+    border-bottom: 1px solid #e94709;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    color: #e94709;
+}
+.calculator1 button {
+    width: 360px;
+    height: 56px;
+    background: #3c3839;
+    font-size: 18px;
+    color: #fff;
+}
+.calculator1 ::-webkit-input-placeholder {
+color: #e94709;
+}
+.calculator1 :-moz-placeholder {
+color: #e94709;
+}
+.calculator1 ::-moz-placeholder {
+color: #e94709;
+}
+.calculator1 :-ms-input-placeholder {
+color: #e94709;
+}
+/*投资计算器2*/
+.calculator2 {
+    width: 390px;
+    padding: 24px 0 34px;
+    background: #fff;
+    border: 8px solid #43bbad;
+    text-align: center;
+}
+.calculator2 h2 {
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+}
+.calculator2 h3 {
+    padding-bottom: 10px;
+    font-size: 12px;
+    color: #666;
+}
+.calculator2 .box {
+    height: 36px;
+    margin: 12px 0 0;
+    line-height: 32px;
+}
+.calculator2 .box label {
+    display: block;
+    float: left;
+    width: 95px;
+    text-align: right;
+}
+.calculator2 .box input {
+    float: left;
+    width: 185px;
+    height: 32px;
+    padding: 0 10px;
+    margin-left: 10px;
+    border: 2px solid #e6e6e6;
+    border-radius: 5px;
+    line-height: 32px;
+}
+.calculator2 .box span {
+    float: left;
+    width: 70px;
+}
+.calculator2 button {
+    display: block;
+    width: 200px;
+    height: 36px;
+    margin: 25px auto 0;
+    background: #000;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #fff;
+}
+/*在线留言1*/
+.msg1 {
+    padding: 40px 0;
+    background: #ebebeb;
+}
+.msg1 .container {
+    width: 1024px;
+    margin: 0 auto;
+}
+.msg1 h2 {
+    padding-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: #e94709;
+}
+.msg1 h3 {
+    font-size: 16px;
+    text-align: center;
+}
+.msg1 .msgl {
+    width: 300px;
+    margin: 38px 0 0 58px;
+}
+.msg1 .msgl p.t {
+    height: 44px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #a7a7a7;
+    font-size: 20px;
+    line-height: 44px;
+}
+.msg1 .msgl ul {
+    margin-top: 26px;
+}
+.msg1 .msgl ul li {
+    float: left;
+    padding-left: 30px;
+    margin: 18px 0 0 90px;
+    background: url(../images/msg1-ul-bg.png) no-repeat 0 -35px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.msg1 .msgl ul li.ml0 {
+    margin: 18px 0 0 0;
+}
+.msg1 .msgl ul li.active {
+    background-position: 0 1px;
+}
+.msg1 .msgr {
+    width: 500px;
+    margin: 38px 68px 0 0;
+}
+.msg1 .msgr .box {
+    margin-top: 10px;
+}
+.msg1 .msgr .box:first-child {
+    margin-top: 0;
+}
+.msg1 .msgr .box label {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 44px;
+    margin-right: 10px;
+    font-size: 16px;
+    line-height: 44px;
+    text-align: right;
+}
+.msg1 .msgr .box .box-textarea textarea {
+    width: 348px;
+    height: 82px;
+    padding: 5px 10px;
+    background: #fff;
+    border: 1px solid #d5d5d5;
+    font-size: 16px;
+    line-height: 36px;
+}
+.msg1 .msgr .box .box-textarea i {
+    left: 10px;
+    top: 16px;
+    font-size: 16px;
+    font-style: normal;
+    color: #a5a8ad;
+}
+.msg1 .msgr .box .box-input input {
+    width: 348px;
+    height: 42px;
+    padding: 0 10px;
+    background: #fff;
+    border: 1px solid #d5d5d5;
+    font-size: 16px;
+    line-height: 42px;
+}
+.msg1 .msgr .box .box-input i {
+    left: 10px;
+    top: 16px;
+    font-size: 16px;
+    font-style: normal;
+    color: #a5a8ad;
+}
+.msg1 button {
+    width: 190px;
+    height: 36px;
+    margin: 70px 413px 0;
+    background: none;
+    border: 2px solid #e94709;
+    font-size: 22px;
+    color: #e94709;
+    letter-spacing: 10px;
+}
+.msg1 p.b {
+    padding-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    color: #a5a8ad;
+}
+.msg1 ::-webkit-input-placeholder {
+color: #a5a8ad;
+}
+.msg1 :-moz-placeholder {
+color: #a5a8ad;
+}
+.msg1 ::-moz-placeholder {
+color: #a5a8ad;
+}
+.msg1 :-ms-input-placeholder {
+color: #a5a8ad;
+}
+/*在线留言2*/
+.msg2 {
+    padding: 40px 0 80px;
+    background: url(../images/msg2-bg.jpg) no-repeat center;
+}
+.msg2 h2 {
+    width: 328px;
+    height: 63px;
+    padding-top: 9px;
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+}
+.msg2 .ctn {
+    width: 735px;
+    margin: 30px auto 0;
+    padding: 40px 50px 30px;
+    background: #000;
+}
+.msg2 .ctn ul li {
+    float: left;
+    width: 114px;
+    height: 39px;
+    margin-left: 10px;
+    background: #67686e;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 39px;
+    text-align: center;
+    color: #b8b8b8;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.msg2 .ctn ul li.active {
+    background: #21c5b4;
+    color: #000;
+}
+.msg2 .ctn ul li:first-child {
+    margin-left: 0;
+}
+.msg2 .ctn .box-textarea {
+    margin-top: 20px;
+}
+.msg2 .ctn .box-textarea textarea {
+    width: 705px;
+    height: 75px;
+    padding: 8px 15px;
+    background: #fff;
+    border: none;
+}
+.msg2 .ctn .box-textarea i {
+    left: 15px;
+    top: 10px;
+    font-size: 13px;
+    font-style: normal;
+    color: #a5a8ad;
+}
+.msg2 .ctn .clearfix {
+    margin-top: 20px;
+}
+.msg2 .ctn .clearfix .box-input input {
+    width: 287px;
+    padding: 12px 10px 12px 55px;
+    background: url(../images/msg2-input2.png) no-repeat 10px center #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) inset;
+}
+.msg2 .ctn .clearfix .box-input:first-child input {
+    background: url(../images/msg2-input1.png) no-repeat 10px center #fff;
+}
+.msg2 .ctn .clearfix .box-input i {
+    left: 56px;
+    top: 14px;
+    font-size: 13px;
+    font-style: normal;
+    color: #a5a8ad;
+}
+.msg2 .ctn button {
+    display: block;
+    width: 205px;
+    height: 36px;
+    margin: 30px auto 0;
+    background: #21c5b4;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #110f00;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.msg2 .ctn button:hover {
+    background: #1cb0a1;
+}
+.msg2 ::-webkit-input-placeholder {
+color: #a5a8ad;
+}
+.msg2 :-moz-placeholder {
+color: #a5a8ad;
+}
+.msg2 ::-moz-placeholder {
+color: #a5a8ad;
+}
+.msg2 :-ms-input-placeholder {
+color: #a5a8ad;
+}

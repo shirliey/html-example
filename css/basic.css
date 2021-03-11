@@ -1,0 +1,51 @@
+@charset 'utf-8';
+/*clear-default*/
+* { margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html, body, input, textarea, button, select { font-family: Microsoft YaHei, SimSun, Tahoma, Helvetica, Arial, sans-serif; }
+body { background: #fff; font-size: 14px; line-height: 1; color: #000; }
+a, a:link, a:visited, a:hover, a:active { text-decoration: none; }
+a img, fieldset { border: 0; }
+img { display: block; border: 0; }
+ul, ol, dl, li { list-style: none; }
+hr { display: block; height: 1px; padding: 0; border: none; border-top: 1px solid #eee; }
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+q, blockquote { quotes: none; }
+q:before, blockquote:before, q:after, blockquote:after { content: ''; }
+table { border-spacing: 0; border-collapse: collapse; font-size: inherit; }
+input, button, select, textarea { outline: none; border: none; border-radius: 5px; -webkit-tap-highlight-color: transparent; }
+select { appearance: none; -moz-appearance: none; -webkit-appearance: none; padding-right: 14px; background: url(../images/arrowSel.png) no-repeat right center; background-size: 12px auto; border: #ccc 1px solid; }
+select::-ms-expand {
+display: none;
+}
+textarea { overflow: auto; resize: none; }
+a, b, body, dd, div, dl, dt, em, form, h1, h2, h3, h4, h5, h6, i, li, ol, p, small, span, td, th, ul { -webkit-tap-highlight-color: rgba(0,0,0,.1); font-weight: normal; }
+/*placeholder*/
+::-webkit-input-placeholder {
+color: #808080;
+}
+:-moz-placeholder {
+color: #808080;
+}
+::-moz-placeholder {
+color: #808080;
+}
+:-ms-input-placeholder {
+color: #808080;
+}
+/*float*/
+.clear { display: block; clear: both; height: 0; overflow: hidden; }
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; overflow: hidden; }
+.clearfix { zoom: 1; }
+/*common*/
+.fl { float: left; }
+.fr { float: right; }
+.none { display: none; }
+.re { position: relative; }
+.ab { position: absolute; }
+.ani { -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; animation-fill-mode: both; }
+/*html5*/
+article, aside, audio, bdi, canvas, command, datalist, details, dialog, embed, figcaption, figure, footer, header, keygen, mark, menu, meter, nav, output, progress, rp, rt, ruby, section, source, summary, time, track, video, wbr { display: block; }
+/*reset结束*/
